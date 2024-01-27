@@ -1,0 +1,50 @@
+<%- include('./head',{style:"home",title:"Registrarme"}) %>
+
+<body>
+    <main class="fondo-register">
+        <div>
+            <a href="register"><h2 class="titulo-reister">Registrarme</h2></a>
+        </div>
+        <form method="POST" action="/register">
+        <section class="formulario">
+            <ul class="list1">
+                <li><input type="text" name="nombre" id="" placeholder="Nombre" class="form-control <%= locals.errors && errors.nombre ? 'is-invalid' : null %>">
+                                        
+                <% if (locals.errors && errors.nombre) { %>
+                 <div class = "text-danger">
+                    <%= errors.nombre.msg %>
+                 </div>
+                <% } %>
+            </li>
+                <li><input type="text" name="apellido" id="" placeholder="Apellido" class="form-control <%= locals.errors && errors.apellido ? 'is-invalid' : null %>">
+                <% if (locals.errors && errors.apellido) { %>
+                    <div class = "text-danger">
+                       <%= errors.apellido.msg %>
+                    </div>
+                   <% } %>
+                </li>
+                <li><input type="password" name="password" id="" placeholder="Contraseña" class="form-control <%= locals.errors && errors.contraseña ? 'is-invalid' : null %>">
+                    <% if (locals.errors && errors.contraseña) { %>
+                        <div class = "text-danger">
+                           <%= errors.contraseña.msg %>
+                        </div>
+                       <% } %>
+                </li>
+            </ul>
+            <ul class="list2">
+                <li><p>Elija su rol</p>
+                <select name="roles" id="">
+                    <option value="1">Administrador</option>
+                    <option value="2">Vendedor</option>
+                </select></li>
+            </ul>
+        </section>
+
+        <div class="divBtn">
+            <button class="buttonCuenta">
+                Crear Cuenta
+            </button>
+        </div>
+    </form>
+    </main>
+</body>

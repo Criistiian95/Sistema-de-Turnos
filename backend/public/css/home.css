@@ -1,0 +1,30 @@
+*{
+    font-family: Georgia, serif;
+    background-color: #DEE3FF;
+}
+
+.header{
+   
+    padding: 10% 0px 10% 0px;
+}
+
+.justify-content{
+    display: flex;
+    justify-content: center;
+    }
+
+.h1, .h2, .justify-content{
+    color: #166B27;
+    text-shadow: 1px 1px 2px #166B27
+}
+
+.input{
+    box-shadow: 1px 2px 2px black;
+     border-radius: 5px;
+}
+
+.btn{
+    padding: 10px 20px 10px 20px;
+    color: black;
+    background-color: #166B27
+}
