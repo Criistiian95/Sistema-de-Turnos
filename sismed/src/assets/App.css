@@ -1,0 +1,25 @@
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  
+    height: 40px;
+    align-items: center;
+}
+.lista{
+  text-decoration: none;
+  color: #166B27;
+ 
+  font-size: 20px;
+}
+.p{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;    
+  background-color: #cbe4ea
+}
+
+
+
+

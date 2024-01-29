@@ -1,0 +1,15 @@
+.lista-patient{
+    list-style: none;
+    text-align: center
+}
+
+.list{
+    text-align: center
+}
+
+.container-patient{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}

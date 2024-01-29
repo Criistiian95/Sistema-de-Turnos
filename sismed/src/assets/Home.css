@@ -1,0 +1,148 @@
+.form {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+}
+
+
+.justify-content {
+   display: flex;
+   justify-content: center;
+}
+
+.h2,
+.justify-content {
+   color: #EAF2F9
+}
+
+.h1 {
+   padding: 10px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+   color: rgb(238, 238, 238);
+   flex-wrap: wrap
+}
+
+.input {
+   box-shadow: 1px 2px 2px black;
+   border-radius: 5px;
+}
+
+.btn {
+   padding: 10px 20px 10px 20px;
+   color: black;
+   background-color: #166B27
+}
+
+
+
+.container {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   padding-left: 10%;
+}
+
+.text-center {
+   display: flex;
+   justify-content: center;
+}
+
+.btn-dash {
+   width: 200px;
+   height: 80px;
+   border-radius: 10px;
+   background-color: #cbe4ea;
+   border-color: #cbe4ea;
+   font-size: 20px;
+}
+
+.container-btn {
+   display: flex;
+   justify-content: space-evenly;
+   padding-top: 100px;
+
+}
+
+.enlaces {
+   color: black;
+   text-decoration: none;
+   background-color: #166B27;
+}
+
+.btn-sesion {
+   border: none;
+   width: 150px;
+   height: 30px;
+ 
+}
+
+.padding {
+   background: rgb(34, 34, 34);
+   color: rgb(238, 238, 238);
+   width: 50%;
+   margin: auto;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   overflow-y: auto;
+}
+
+.contenedor {
+   padding: 0 10px;
+   flex-grow: 1;
+   flex-basis: 0;
+   color: rgb(238, 238, 238);
+}
+
+.contenedor-dos {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   height: 100%;
+}
+
+.doctores {
+   padding-bottom: 10px;
+   overflow-x: auto;
+   overflow-y: hidden;
+   gap: 10px;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+
+.description-doc {
+   width: 140px
+}
+
+.list-patients {
+   border-radius: 5px;
+}
+
+.ejemplo-image {
+   background-image: url("tanana.jpg");
+   height: 70px;
+   background-size: cover;
+   background-position: center center;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+}
+
+.definition-patient {
+   padding: 5px;
+    font-size: 20px;
+   background-color: #dee2e6;
+    border: solid;
+    border-radius: 5px;
+    display: inline-grid;
+    gap: 20px;
+    border-color: #4C4D4D;
+    color: black;
+}
+
+
+
