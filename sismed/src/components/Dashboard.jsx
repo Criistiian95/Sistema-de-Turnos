@@ -2,8 +2,8 @@ import React from 'react';
 import { useParams } from "react-router-dom";
 import "../assets/Home.css";
 import "../assets/App.css"
-import StateTurns from './StateTurns';
-import Navbar from './Navbar';
+import StateTurns from './StateTurns.js';
+import Navbar from './Navbar.jsx';
 
 function Dashboard() {
   const { userId } = useParams();

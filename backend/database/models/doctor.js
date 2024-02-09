@@ -15,7 +15,7 @@ module.exports = (sequelize, dataTypes) => {
           allowNull: false
       },
       specialties_id: {
-        type: dataTypes.TEXT(100),
+        type: dataTypes.INTEGER,
         unique: true,
         allowNull: false,
       }  

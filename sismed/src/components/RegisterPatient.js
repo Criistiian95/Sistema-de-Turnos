@@ -5,7 +5,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
 import { useNavigate } from 'react-router-dom';
-import Navbar from "./Navbar";
+import Navbar from "./Navbar.jsx";
 
 function RegisterPatient() {
 

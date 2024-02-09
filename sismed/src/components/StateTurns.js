@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import TurnsInfo from "./TurnsInfo";
-import isSameDay from "date-fns/isSameDay";
+import TurnsInfo from "./TurnsInfo.jsx";
+import isSameDay from "date-fns/isSameDay/index.js";
 
 
 

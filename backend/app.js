@@ -7,10 +7,10 @@ const methodOverride =  require('method-override');
 const cookieParser = require("cookie-parser");
 const morgan = require("morgan")
 const bodyParser = require('body-parser');
-const mainRoutes= require("./backend/src/routes/main")
-const patientRoutes= require("./backend/src/routes/patient")
-const doctorRoutes = require("./backend/src/routes/doctor")
-const ShiftRoutes = require("./backend/src/routes/shift")
+const mainRoutes= require("../backend/src/routes/main")
+const patientRoutes= require("../backend/src/routes/patient")
+const doctorRoutes = require("../backend/src/routes/doctor")
+const ShiftRoutes = require("../backend/src/routes/shift")
 
 const cors= require("cors")
 const app = express();

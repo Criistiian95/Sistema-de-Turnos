@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { useParams } from "react-router-dom";
 import * as Yup from 'yup';
-import TurnsInfo from "./TurnsInfo";
-import Navbar from "./Navbar";
+import TurnsInfo from "./TurnsInfo.jsx";
+import Navbar from "./Navbar.jsx";
 
 
 function TurnsPatients() {

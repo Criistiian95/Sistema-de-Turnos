@@ -1,18 +1,18 @@
 import React from "react";
 import { useNavigate,useParams } from "react-router-dom";
-import DoctorInfo from "./DoctorInfo";
-import PatientInfo from "./PatientInfo";
-import Horarios from "./Horarios";
-import { useHorariosContext } from "./HorariosContext";
-import { useDoctorContext } from "./DoctorContext";
-import { usePatientContext } from "./PatientContext";
-import { useFechasOcupadasContext } from './FechasContext';
+import DoctorInfo from "./DoctorInfo.jsx";
+import PatientInfo from "./PatientInfo.jsx";
+import Horarios from "./Horarios.jsx";
+import { useHorariosContext } from "./HorariosContext.js";
+import { useDoctorContext } from "./DoctorContext.js";
+import { usePatientContext } from "./PatientContext.js";
+import { useFechasOcupadasContext } from './FechasContext.js';
 import swal from "sweetalert"
 import "../assets/Home.css"
-import Doctors from "./Doctors";
-import Patients from "./Patients";
+import Doctors from "./Doctors.js";
+import Patients from "./Patients.js";
 import "../assets/Turnero.css"
-import Navbar from "./Navbar";
+import Navbar from "./Navbar.jsx";
 
 
 

@@ -74,6 +74,7 @@ function Login() {
         }
 
     };
+    console.log("cookie", localStorage)
 
 
     return (

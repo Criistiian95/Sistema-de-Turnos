@@ -1,8 +1,8 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { usePatientContext } from "./PatientContext";
-import { useDoctorContext } from "./DoctorContext";
+import { usePatientContext } from "./PatientContext.js";
+import { useDoctorContext } from "./DoctorContext.js";
 
 
 function Patients() {

@@ -6,7 +6,7 @@ import * as Yup from 'yup';
 import { useNavigate, Link } from 'react-router-dom';
 
 function RegisterUser() {
-    const navigate= useNavigate()
+    const navigate = useNavigate()
     const initialValues = {
         nombre: '',
         apellido: '',
@@ -23,8 +23,8 @@ function RegisterUser() {
         roles: Yup.string().required("Debe elegir un rol"),
     });
 
-    const handleSubmit = async (values,id) => {
-       
+    const handleSubmit = async (values, id) => {
+
         try {
             const isValid = await validationSchema.isValid(values);
             const requestBody = {
@@ -37,7 +37,7 @@ function RegisterUser() {
             }
             const response = await fetch(`http://localhost:3003/api/user/Registro-usuario`, {
                 method: 'POST',
-                credentials:"include",
+                credentials: "include",
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -45,7 +45,7 @@ function RegisterUser() {
             });
             console.log(response)
             if (response.ok) {
-                const data= await response.json()
+                const data = await response.json()
                 console.log("Inicio exitoso", data.id)
                 navigate("/login", { replace: true });
             } else {
@@ -60,55 +60,79 @@ function RegisterUser() {
 
     return (
         <header className="header">
-            <div className="conainer"></div>
-            <div className="container">
-            
-            <div className='form'>
-                <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
-                        <Form>
-                            <h1 className="h1 justify-content">Registra el nuevo usuario</h1>
-                            <label className="nombre justify-content">Nombre</label>
-                            <Field type="text" name="nombre" />
-                            <ErrorMessage name="nombre" component="div" />
-                            <label className="justify-content">Apellido</label>
-                            <Field type="text" name="apellido" />
-                            <ErrorMessage name="apellido" component="div" />
-                            <label className="justify-content">Email</label>
-                            <Field type="email" name="email" />
-                            <ErrorMessage name="email" component="div" />
-                            <label className="justify-content">Contraseña</label>
-                            <Field type="password" name="password" />
-                            <ErrorMessage name="password" component="div" />
-                            <label className="justify-content">Elija su rol</label>
-                            <div>
-                                
-                                <Field as="select" name="roles">
-                                    <option value="" label="Selecciona un rol" />
-                                    <option value="1" label="Administrador" />
-                                    <option value="2" label="Moderador" />
-                                    <option value="3" label="Usuario" />
-                                </Field>
-                                <ErrorMessage name="roles" component="div" />
+            <section style={{ backgroundColor: "#AAF3E0" }}>
+                <div className="container py-5 h-100">
+                    <div className='row d-flex justify-content-center align-items-center h-100'>
+                        <div className='col col-xl-10'>
+                            <div className='card' style={{ borderRadius: "1rem" }}>
+                                <div className='d-flex justify-content-center'>
+                                    <div class="col-md-6 col-lg-5 d-none d-md-block">
+                                        <div className="col-md-6 col-lg-7 d-flex align-items-center">
+                                            <div className='card-body p-4 p-lg-5 text-black'>
+                                                <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
+                                                    <Form>
+                                                        <div className="d-flex align-items-center mb-3 pb-1">
+                                                            <div className='spinning'>
+                                                                <div className='spinning-2'>
+                                                                </div>
+                                                            </div>
+                                                            <span className="h1 fw-bold mb-0">Sistema de turnos medicos</span>
+                                                        </div>
+                                                        <h3 className="fw-normal mb-3 pb-3" style={{ letterSpacing: "1px" }}>Registra el nuevo usuario</h3>
+                                                        <div className='form-outline mb-4'>
+                                                            <label className="form-label" for="form2Example17" style={{ fontSize: "30px" }}>Nombre</label>
+                                                            <Field type="text" name="nombre" />
+                                                            <ErrorMessage name="nombre" component="div" />
+                                                        </div>
+                                                        <div className='form-outline mb-4'>
+                                                            <label className="form-label" for="form2Example17" style={{ fontSize: "30px" }}>Apellido</label>
+                                                            <Field type="text" name="apellido" />
+                                                            <ErrorMessage name="apellido" component="div" />
+                                                        </div>
+                                                        <div className='form-outline mb-4'>
+                                                            <label className="form-label" for="form2Example17" style={{ fontSize: "30px" }}>Email</label>
+                                                            <Field type="email" name="email" />
+                                                            <ErrorMessage name="email" component="div" />
+                                                        </div>
+                                                        <div className='form-outline mb-4'>
+                                                            <label className="form-label" for="form2Example17" style={{ fontSize: "30px" }}>Contraseña</label>
+                                                            <Field type="password" name="password" />
+                                                            <ErrorMessage name="password" component="div" />
+                                                        </div>
+                                                        <div className='form-outline mb-4'>
+                                                            <label className="form-label" for="form2Example17" style={{ fontSize: "30px" }}>Elija su rol</label>
+                                                            <div>
+
+                                                                <Field as="select" name="roles">
+                                                                    <option value="" label="Selecciona un rol" />
+                                                                    <option value="1" label="Administrador" />
+                                                                    <option value="2" label="Moderador" />
+                                                                    <option value="3" label="Usuario" />
+                                                                </Field>
+                                                                <ErrorMessage name="roles" component="div" />
+                                                            </div>
+                                                        </div>
+                                                        <div className="pt-1 mb-4">
+                                                            <button type="submit" className="btn btn-success btn-lg btn-block">Registrar Usuario</button>
+                                                        </div>
+                                                    </Form>
+
+                                                </Formik>
+                                                <div>
+                                                    <button className='btn btn-success btn-lg btn-block ' >
+                                                        <a className='link-underline-opacity-0 fw-bolder text-light text-decoration-none'
+                                                            href="/login">Loguearse</a></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        <p>
-                            <button type="submit" className="input btn">Registrarse</button>
-                            </p>
-                        </Form>
-                    
-                </Formik>
-                <div>
-                <nav className='navbar'>
-                      <Link to="/register" className="lista">
-                        Registar usuario
-                      </Link>
-                      <Link to="/login" className="lista">
-                        Login
-                      </Link>
-                    </nav>
+                        </div>
+
                     </div>
-                
                 </div>
-            </div>
+            </section>
         </header>
     );
 }
