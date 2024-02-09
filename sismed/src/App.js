@@ -38,7 +38,7 @@ function App() {
             <Route path="/createDoctor" element={<RegisterDoctor/>} />
             <Route path="/turns-patients" element={<TurnsPatients />} />
             <Route path="/doctors" element={<Doctors  />} />
-            <ProtectedRoute path="/turnos"  element={<Turnos />} />
+            <Route path="/turnos" element={<Turnos />} />
           </Routes>
         <Footer/>
         </BrowserRouter>

@@ -2,8 +2,6 @@
   "name": "sismed",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
-  "main": "public/electron.mjs",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
@@ -46,13 +44,6 @@
     "eject": "react-scripts eject",
     "electron-dev": "concurrently \"set BROWSER=none && npm start\" \"wait-on http://localhost:3000 && electron .\""
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest",
-      "standard"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -73,7 +64,6 @@
     "electron": "^28.2.0",
     "eslint": "^8.56.0",
     "react-scripts": "^5.0.1",
-    "standard": "17.0.0",
     "webpack": "^5.90.1"
   }
 }

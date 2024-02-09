@@ -84,7 +84,7 @@ app.use("/api/shift", ShiftRoutes)
 
 
 app.use((req, res, next) => {
-  res.send("Error 404! File Not Found");
+  res.send("Hola mundo");
   next()
 });
 
