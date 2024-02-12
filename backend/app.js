@@ -15,26 +15,19 @@ const ShiftRoutes = require("../backend/src/routes/shift")
 const cors= require("cors")
 const app = express();
 
-var corsOptions = {
-  origin: "https://sistema-de-turnos-production-e4d9.up.railway.app",
+const corsOptions = {
+  origin: ["http://localhost:3001", "http://localhost:3003", "https://fontend-sistu-production.up.railway.app"],
   credentials: true, 
 };
 
+app.use(cors(corsOptions));
 
-
-
-
-let allowCrossDomain = function(req, res, next) {
-    res.header('Access-Control-Allow-Origin', "http://localhost:3001","http://localhost:3003","https://fontend-sistu-production.up.railway.app");
-    res.header("Access-Control-Allow-Methods", "OPTIONS, POST, GET, PUT, DELETE");
-    res.header('Access-Control-Allow-Headers', "*");
-    res.header('Access-Control-Allow-Credentials', true); // Permite cookies
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-    res.header("Access-Control-Allow-Headers", "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With")
-    next();
-  }
-
-  app.use(cors(corsOptions));
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Methods", "OPTIONS, POST, GET, PUT, DELETE");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+  res.header("Access-Control-Allow-Credentials", true);
+  next();
+});
 
 
 
@@ -52,7 +45,7 @@ app.use(expressSession({
   }
 }));
 app.use(cookieParser());
-app.use(allowCrossDomain);
+
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(methodOverride('_method'));
