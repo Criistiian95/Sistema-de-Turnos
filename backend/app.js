@@ -16,7 +16,7 @@ const cors= require("cors")
 const app = express();
 
 const corsOptions = {
-  origin: ["http://localhost:3001", "http://localhost:3003", "https://fontend-sistu-production.up.railway.app"],
+  origin: ["http://localhost:3000", "http://localhost:3003", "https://fontend-sistu-production.up.railway.app"],
   credentials: true, 
 };
 

@@ -1,12 +1,10 @@
-require('dotenv').config();
-
-module.exports = {
+module.exports={
   "development": {
     "username":"root",
     "password": "A1EFB4fagE35DahGhbFbf3HD3cfEB6Fb",
     "database": "railway",
     "host":"roundhouse.proxy.rlwy.net",
-    "port": 3306,
+    "port": 49500,
     "dialect": "mysql"
   },
   "test": {
@@ -14,7 +12,7 @@ module.exports = {
     "password": "A1EFB4fagE35DahGhbFbf3HD3cfEB6Fb",
     "database": "railway",
     "host":"roundhouse.proxy.rlwy.net",
-    "port": 3306,
+    "port": 49500,
     "dialect": "mysql"
   },
   "production": {
@@ -22,7 +20,7 @@ module.exports = {
     "password": "A1EFB4fagE35DahGhbFbf3HD3cfEB6Fb",
     "database": "railway",
     "host":"roundhouse.proxy.rlwy.net",
-    "port": 3306,
+    "port": 49500,
     "dialect": "mysql"
   }
 }

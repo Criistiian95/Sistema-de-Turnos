@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Role'
+    let alias = 'Specialty'
     let cols = {
         id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
@@ -14,7 +14,7 @@ module.exports = (sequelize, dataTypes) => {
     let config = {
         timestamps: false
     }
-    const Role = sequelize.define(alias, cols, config);
+    const Specialty = sequelize.define(alias, cols, config);
     
-    return Role;
+    return Specialty;
   };
