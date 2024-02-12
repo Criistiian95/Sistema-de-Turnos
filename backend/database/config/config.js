@@ -5,7 +5,7 @@ module.exports = {
     "username":"root",
     "password": "A1EFB4fagE35DahGhbFbf3HD3cfEB6Fb",
     "database": "railway",
-    "host":"roundhouse.proxy.rlwy.net:49500",
+    "host":"roundhouse.proxy.rlwy.net",
     "port": 3306,
     "dialect": "mysql"
   },
@@ -13,7 +13,7 @@ module.exports = {
     "username":"root",
     "password": "A1EFB4fagE35DahGhbFbf3HD3cfEB6Fb",
     "database": "railway",
-    "host":"roundhouse.proxy.rlwy.net:49500",
+    "host":"roundhouse.proxy.rlwy.net",
     "port": 3306,
     "dialect": "mysql"
   },
@@ -21,7 +21,7 @@ module.exports = {
     "username":"root",
     "password": "A1EFB4fagE35DahGhbFbf3HD3cfEB6Fb",
     "database": "railway",
-    "host":"roundhouse.proxy.rlwy.net:49500",
+    "host":"roundhouse.proxy.rlwy.net",
     "port": 3306,
     "dialect": "mysql"
   }
