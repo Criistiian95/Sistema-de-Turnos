@@ -2,11 +2,11 @@ require('dotenv').config();
 
 module.exports = {
   "development": {
-    "username": process.env.DB_USER,
-    "password": process.env.DB_PASSWORD,
-    "database": process.env.DB_NAME,
-    "host": process.env.DB_HOST,
-    "port": process.env.DB_PORT,
+    "username":"root",
+    "password": "-1-EegefG53E1h661gF1dbbb5B-56-CAh",
+    "database": "railways",
+    "host":"viaduct.proxy.rlwy.net",
+    "port": 14890,
     "dialect": "mysql"
   },
   "test": {
@@ -17,11 +17,11 @@ module.exports = {
     "dialect": "mysql"
   },
   "production": {
-    "username": process.env.DB_USER,
-    "password": process.env.DB_PASSWORD,
-    "database": process.env.DB_NAME,
-    "host": process.env.DN_HOST,
-    "port": process.env.DB_PORT,
+    "username":"root",
+    "password": "-1-EegefG53E1h661gF1dbbb5B-56-CAh",
+    "database": "railways",
+    "host":"viaduct.proxy.rlwy.net",
+    "port": 14890,
     "dialect": "mysql"
   }
 }
