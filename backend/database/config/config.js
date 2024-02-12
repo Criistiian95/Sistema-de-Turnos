@@ -3,25 +3,26 @@ require('dotenv').config();
 module.exports = {
   "development": {
     "username":"root",
-    "password": "-1-EegefG53E1h661gF1dbbb5B-56-CAh",
+    "password": "A1EFB4fagE35DahGhbFbf3HD3cfEB6Fb",
     "database": "railway",
-    "host":"viaduct.proxy.rlwy.net",
-    "port": 14890,
+    "host":"roundhouse.proxy.rlwy.net",
+    "port": 49500,
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "sismed",
-    "host": "127.0.0.1",
+    "username":"root",
+    "password": "A1EFB4fagE35DahGhbFbf3HD3cfEB6Fb",
+    "database": "railway",
+    "host":"roundhouse.proxy.rlwy.net",
+    "port": 49500,
     "dialect": "mysql"
   },
   "production": {
     "username":"root",
-    "password": "-1-EegefG53E1h661gF1dbbb5B-56-CAh",
+    "password": "A1EFB4fagE35DahGhbFbf3HD3cfEB6Fb",
     "database": "railway",
-    "host":"viaduct.proxy.rlwy.net",
-    "port": 14890,
+    "host":"roundhouse.proxy.rlwy.net",
+    "port": 49500,
     "dialect": "mysql"
   }
 }
