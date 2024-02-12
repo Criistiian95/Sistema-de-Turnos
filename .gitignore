@@ -1,3 +1,3 @@
 node_modules
 .env
-Sistema-deTurnos/backend/database/config/config.js
+backend/database/config/config.js

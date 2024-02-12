@@ -4,7 +4,7 @@ module.exports = {
   "development": {
     "username":"root",
     "password": "-1-EegefG53E1h661gF1dbbb5B-56-CAh",
-    "database": "railways",
+    "database": "railway",
     "host":"viaduct.proxy.rlwy.net",
     "port": 14890,
     "dialect": "mysql"
@@ -19,7 +19,7 @@ module.exports = {
   "production": {
     "username":"root",
     "password": "-1-EegefG53E1h661gF1dbbb5B-56-CAh",
-    "database": "railways",
+    "database": "railway",
     "host":"viaduct.proxy.rlwy.net",
     "port": 14890,
     "dialect": "mysql"
