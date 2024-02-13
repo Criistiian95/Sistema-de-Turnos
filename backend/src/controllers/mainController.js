@@ -129,14 +129,11 @@ const controller = {
   logout: (req, res) => {
     req.session.destroy((err) => {
       if (err) {
-        console.error('Error al cerrar la sesión:', err);
-        res.status(500).json({ message: 'Error al cerrar la sesión' });
-      } else {
-        // Limpia la cookie del token al establecerla con un tiempo de expiración pasado
-        res.cookie('token', '', { httpOnly: true, expires: new Date(0) });
-  
-        res.status(200).json({ message: 'Cierre de sesión exitoso' });
+        console.log(err);
       }
+      res.clearCookie('email');
+      console.log("Cierre exitoso");
+      res.redirect('/');
     })
   }
 }
