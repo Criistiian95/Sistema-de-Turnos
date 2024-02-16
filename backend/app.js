@@ -15,19 +15,26 @@ const ShiftRoutes = require("../backend/src/routes/shift")
 const cors= require("cors")
 const app = express();
 
-const corsOptions = {
-  origin: ["http://localhost:3000", "http://localhost:3003", "https://fontend-sistu-production.up.railway.app"],
+var corsOptions = {
+  origin: "http://localhost:3000",
   credentials: true, 
 };
 
-app.use(cors(corsOptions));
 
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Methods", "OPTIONS, POST, GET, PUT, DELETE");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-  res.header("Access-Control-Allow-Credentials", true);
-  next();
-});
+
+
+
+let allowCrossDomain = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', "http://localhost:3000","http://localhost:3003");
+    res.header("Access-Control-Allow-Methods", "OPTIONS, POST, GET, PUT, DELETE");
+    res.header('Access-Control-Allow-Headers', "*");
+    res.header('Access-Control-Allow-Credentials', true); // Permite cookies
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    res.header("Access-Control-Allow-Headers", "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With")
+    next();
+  }
+
+  app.use(cors(corsOptions));
 
 
 
@@ -45,7 +52,7 @@ app.use(expressSession({
   }
 }));
 app.use(cookieParser());
-
+app.use(allowCrossDomain);
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(methodOverride('_method'));
@@ -75,11 +82,9 @@ app.use("/api/patient", patientRoutes)
 app.use("/api/doctor", doctorRoutes)
 app.use("/api/shift", ShiftRoutes)
 
-app.get("/", (req,res)=>{
-  res.status(200).send({msg: "Hola Mundo!"})
-})
+
 app.use((req, res, next) => {
-  res.send("Hola mundo");
+  res.send("Error 404! File Not Found");
   next()
 });
 
@@ -87,8 +92,6 @@ app.use((req, res, next) => {
 
 
 
-
-
 // Server Init
 const port = process.env.PORT || 3003;
-app.listen(port, () => console.log('Server escuchando en puerto http://localhost:', port));
+app.listen(port, () => console.log('Server escuchando en puerto http://localhost:3003'));

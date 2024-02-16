@@ -2,7 +2,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken")
 const { validationResult } = require("express-validator")
 const sequelize = require("sequelize")
-const db= require("../../database/models")
+const db = require("../../database/models");
 const session = require("express-session");
 
 
@@ -26,15 +26,18 @@ const controller = {
       password: bcrypt.hashSync(req.body.password, 10),
       role_id: req.body.role
     };
-    console.log(newUser)
     try {
-      console.log(newUser);
-      await db.User.create(newUser);
-      console.log(newUser);
+      await db.User.create(newUser)
+
+      const token = jwt.sign({ id: newUser.id }, "SECRET", {
+        expiresIn: 86400
+      })
+      console.log(token, "token Guardado")
+      res.cookie("token", token)
       res.status(201).json({ message: 'Usuario registrado con éxito' });
     } catch (error) {
-      console.error('Error al crear usuario:', error);
-      res.status(500).json({ message: 'Error al registrar el usuario', error: error.message });
+      // Manejo de errores aquí...
+      res.status(500).json({ error: 'Error al registrar el usuario' });
     }
   },
 
