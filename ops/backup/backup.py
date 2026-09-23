@@ -39,7 +39,7 @@ def config(directory, variable):
     def escape(v):
         return v.replace("\\", "\\\\").replace('"', '\\"')
     text = "[client]\n" + "".join(f'{k}="{escape(v)}"\n' for k, v in fields.items())
-    text += f"port={port}\nprotocol=TCP\nconnect-timeout=30\nssl-mode=REQUIRED\n"
+    text += f"port={port}\nprotocol=TCP\nssl-mode=REQUIRED\n"
     path = directory / "client.cnf"
     path.write_text(text)
     path.chmod(0o600)
