@@ -46,7 +46,7 @@ function createApp(db = require("./db"), settings = config()) {
       },
     }),
   );
-  app.use(express.json({ limit: "32kb" }));
+  app.use(express.json({ limit: "64kb" }));
   const auth = authentication(db, settings.secret);
   const admin = (req, res, next) =>
     Number(req.user.role_id) === 1
@@ -139,6 +139,7 @@ function createApp(db = require("./db"), settings = config()) {
     }),
   );
   app.use("/api", auth);
+  require("./services/clinical")(app, db, { wrap, validate, admin });
   app.get("/api/user/profile", (req, res) => res.json({ user: req.user }));
   app.get(
     "/api/user/:userId",

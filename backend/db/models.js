@@ -87,5 +87,5 @@ module.exports = function defineModels(sequelize) {
   Shift.belongsTo(Patient, { as: "patient", foreignKey: "paciente_id" });
   Shift.belongsTo(Doctor, { as: "doctor", foreignKey: "doctor_id" });
   Shift.belongsTo(Specialty, { as: "specialty", foreignKey: "especialidad" });
-  return { sequelize, Role, User, Session, Specialty, Patient, Doctor, Shift };
+  return { sequelize, Role, User, Session, Specialty, Patient, Doctor, Shift, ...require("./clinical-models")(sequelize) };
 };

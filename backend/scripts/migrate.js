@@ -8,6 +8,7 @@ async function migrate() {
       "SELECT name FROM sismed_migrations WHERE name = '001-initial'",
     );
     if (rows.length) {
+      await require("../db/migrations/002-clinical")(sequelize);
       console.log("Base actualizada.");
       return;
     }
@@ -24,6 +25,7 @@ async function migrate() {
   await sequelize.query(
     "INSERT INTO sismed_migrations (name) VALUES ('001-initial')",
   );
+  await require("../db/migrations/002-clinical")(sequelize);
   console.log("Tablas, índices y especialidades creados.");
 }
 if (require.main === module)
