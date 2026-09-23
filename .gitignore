@@ -7,3 +7,9 @@ node_modules/
 !.env.example
 *.log
 deliverables/
+backup-output/
+__pycache__/
+*.sql
+*.sql.gz
+*.cms
+*clave-respaldo*
